@@ -155,7 +155,7 @@
                             </li>
                             <!-- Selection and Recuitment -->
                             <li class="nav-item ">
-                                <a class="nav-link" href="#" data-toggle="collapse" aria-expanded="false" data-target="#submenu-1" aria-controls="submenu-1"><i class="fa fa-fw fa-user-circle"></i>Selection and Recuitment <span class="badge badge-success">6</span></a>
+                                <a class="nav-link active" href="#" data-toggle="collapse" aria-expanded="false" data-target="#submenu-1" aria-controls="submenu-1"><i class="fa fa-fw fa-user-circle"></i>Selection and Recuitment <span class="badge badge-success">6</span></a>
                                 <div id="submenu-1" class="collapse submenu">
                                     <ul class="nav flex-column">
                                         <li class="nav-item">
@@ -178,7 +178,7 @@
                                             </div>
                                         </li>
                                         <li class="nav-item">
-                                            <a class="nav-link" href="./records-management/Records.php">Lorem, ipsum dolor.</a>
+                                            <a class="nav-link" href="dashboard-finance.html">Lorem, ipsum dolor.</a>
                                         </li>
                                         <li class="nav-item">
                                             <a class="nav-link" href="dashboard-sales.html">Lorem, ipsum dolor.</a>
@@ -483,12 +483,14 @@
                                     <nav aria-label="breadcrumb">
                                         <ol class="breadcrumb">
                                             <li class="breadcrumb-item">
+                                                <a href="#" class="breadcrumb-link">
                                                 <?php 
                                                     $crumbs = explode("/",$_SERVER["REQUEST_URI"]);
                                                     foreach($crumbs as $crumb){
                                                         echo ucfirst(str_replace(array(".php","_"),array("",""),$crumb) . ' / ');
                                                     }
                                                 ?>
+                                                </a>
                                             </li>
                                             <!-- <li class="breadcrumb-item active" aria-current="page">Dashboard</li> -->
                                         </ol>

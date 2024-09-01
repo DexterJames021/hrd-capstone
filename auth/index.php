@@ -3,7 +3,6 @@
 <html lang="en">
  
 <head>
-    <!-- Required meta tags -->
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <title>Login</title>
@@ -34,13 +33,18 @@
     <!-- login page  -->
     <!-- ============================================================== -->
     <div class="splash-container">
-    <?php 
-                    if(isset($err) && $err != ""){
-                        echo $err;
-                    }
-                ?>
+        <?php 
+            if(isset($err) && $err != ""){
+                echo $err;
+            }
+        ?>
         <div class="card ">
-            <div class="card-header text-center"><a href="../index.html"><img class="logo-img" src="../assets/images/logo.png" alt="logo"></a><span class="splash-description">Please enter your user information.</span></div>
+            <div class="card-header text-center">
+                <a href="../index.html">
+                    <img class="logo-img" src="../assets/images/bcp-hrd-logo.jpg" alt="logo" style="height:10rem;width:auto;">
+                </a>
+                <span class="splash-description">For authenticated staffs only.</span>
+            </div>
             <div class="card-body">
                 <form>
                     <div class="form-group">
@@ -58,8 +62,6 @@
                 </form>
             </div>
             <div class="card-footer bg-white p-0  ">
-                <div class="card-footer-item card-footer-item-bordered">
-                    <a href="#" class="footer-link">Create An Account</a></div>
                 <div class="card-footer-item card-footer-item-bordered">
                     <a href="#" class="footer-link">Forgot Password</a>
                 </div>

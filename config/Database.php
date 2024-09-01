@@ -1,7 +1,7 @@
 <?php 
 
 define("host","localhost");
-define("db","hrcapstone");
+define("db","bcp-hrd");
 define("user","root");
 define("pass","");
 define("dns","mysql:host=".host.";dbname=".db);
