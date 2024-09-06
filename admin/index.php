@@ -1,3 +1,15 @@
+<?php 
+session_start();
+
+if(isset($_SESSION['user_id'])){
+    
+    // header("Location: ../index.php");
+}else{
+    header("Location: ../index.php");
+}
+
+
+?>
 <!doctype html>
 <html lang="en">
  
@@ -9,11 +21,8 @@
     <link href="../assets/vendor/fonts/circular-std/style.css" rel="stylesheet">
     <link rel="stylesheet" href="../assets/libs/css/style.css">
     <link rel="stylesheet" href="../assets/vendor/fonts/fontawesome/css/fontawesome-all.css">
-    <link rel="stylesheet" href="../assets/vendor/charts/chartist-bundle/chartist.css">
-    <link rel="stylesheet" href="../assets/vendor/charts/morris-bundle/morris.css">
-    <link rel="stylesheet" href="../assets/vendor/fonts/material-design-iconic-font/css/materialdesignicons.min.css">
-    <link rel="stylesheet" href="../assets/vendor/charts/c3charts/c3.css">
     <link rel="stylesheet" href="../assets/vendor/fonts/flag-icon-css/flag-icon.min.css">
+    <link rel="shortcut icon" href="../assets/images/bcp-hrd-logo.jpg" type="image/x-icon">
     <title>Admin Dashboard</title>
 </head>
 
@@ -123,7 +132,7 @@
                             <a class="nav-link nav-user-img" href="#" id="navbarDropdownMenuLink2" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><img src="assets/images/avatar-1.jpg" alt="" class="user-avatar-md rounded-circle"></a>
                             <div class="dropdown-menu dropdown-menu-right nav-user-dropdown" aria-labelledby="navbarDropdownMenuLink2">
                                 <div class="nav-user-info">
-                                    <h5 class="mb-0 text-white nav-user-name">Admin user </h5>
+                                    <h5 class="mb-0 text-white nav-user-name"> <?= $_SESSION['username'] ?> </h5>
                                     <span class="status"></span><span class="ml-2">Available</span>
                                 </div>
                                 <a class="dropdown-item" href="#"><i class="fas fa-user mr-2"></i>Account</a>
@@ -152,6 +161,11 @@
                         <ul class="navbar-nav flex-column">
                             <li class="nav-divider">
                                 Human Resource Dept.
+                            </li>
+                            <li class="nav-item ">
+                                <a class="nav-link active" href="index.php" >
+                                    <i class="fas fa-fw fa-home"></i> Dashboard
+                                </a>
                             </li>
                             <!-- Selection and Recuitment -->
                             <li class="nav-item ">
@@ -478,17 +492,14 @@
                         <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12">
                             <div class="page-header">
                                 <h2 class="pageheader-title">Dashboard</h2>
+                    
+
                                 <p class="pageheader-text">Nulla euismod urna eros, sit amet scelerisque torton lectus vel mauris facilisis faucibus at enim quis massa lobortis rutrum.</p>
                                 <div class="page-breadcrumb">
                                     <nav aria-label="breadcrumb">
                                         <ol class="breadcrumb">
                                             <li class="breadcrumb-item">
-                                                <?php 
-                                                    $crumbs = explode("/",$_SERVER["REQUEST_URI"]);
-                                                    foreach($crumbs as $crumb){
-                                                        echo ucfirst(str_replace(array(".php","_","index"),array("",""," "),$crumb) . ' / ');
-                                                    }
-                                                ?>
+                                                <?php require_once "../assets/helper/breadcrumb.php"; breadcrumb()?>
                                             </li>
                                             <!-- <li class="breadcrumb-item active" aria-current="page">Dashboard</li> -->
                                         </ol>
@@ -1036,18 +1047,6 @@
     <script src="../assets/vendor/slimscroll/jquery.slimscroll.js"></script>
     <!-- main js -->
     <script src="../assets/libs/js/main-js.js"></script>
-    <!-- chart chartist js -->
-    <script src="../assets/vendor/charts/chartist-bundle/chartist.min.js"></script>
-    <!-- sparkline js -->
-    <script src="../assets/vendor/charts/sparkline/jquery.sparkline.js"></script>
-    <!-- morris js -->
-    <script src="../assets/vendor/charts/morris-bundle/raphael.min.js"></script>
-    <script src="../assets/vendor/charts/morris-bundle/morris.js"></script>
-    <!-- chart c3 js -->
-    <script src="../assets/vendor/charts/c3charts/c3.min.js"></script>
-    <script src="../assets/vendor/charts/c3charts/d3-5.4.0.min.js"></script>
-    <script src="../assets/vendor/charts/c3charts/C3chartjs.js"></script>
-    <script src="../assets/libs/js/dashboard-ecommerce.js"></script>
 </body>
  
 </html>

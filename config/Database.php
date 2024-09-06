@@ -9,5 +9,5 @@ define("dns","mysql:host=".host.";dbname=".db);
 try{
     $conn = new PDO(dns,user,pass);
 }catch(PDOException $e){
-    echo "ERR: ". $e->getMessage();
+    echo "DATABASE ERROR: ". $e->getMessage();
 }

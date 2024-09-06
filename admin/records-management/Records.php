@@ -9,10 +9,7 @@
     <link href="../../assets/vendor/fonts/circular-std/style.css" rel="stylesheet">
     <link rel="stylesheet" href="../../assets/libs/css/style.css">
     <link rel="stylesheet" href="../../assets/vendor/fonts/fontawesome/css/fontawesome-all.css">
-    <link rel="stylesheet" href="../../assets/vendor/charts/chartist-bundle/chartist.css">
-    <link rel="stylesheet" href="../../assets/vendor/charts/morris-bundle/morris.css">
     <link rel="stylesheet" href="../../assets/vendor/fonts/material-design-iconic-font/css/materialdesignicons.min.css">
-    <link rel="stylesheet" href="../../assets/vendor/charts/c3charts/c3.css">
     <link rel="stylesheet" href="../../assets/vendor/fonts/flag-icon-css/flag-icon.min.css">
     <title>Admin Dashboard</title>
 </head>
@@ -153,6 +150,11 @@
                             <li class="nav-divider">
                                 Human Resource Dept.
                             </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="../index.php" >
+                                    <i class="fas fa-fw fa-home"></i> Dashboard
+                                </a>
+                            </li>
                             <!-- Selection and Recuitment -->
                             <li class="nav-item ">
                                 <a class="nav-link active" href="#" data-toggle="collapse" aria-expanded="false" data-target="#submenu-1" aria-controls="submenu-1"><i class="fa fa-fw fa-user-circle"></i>Selection and Recuitment <span class="badge badge-success">6</span></a>
@@ -163,38 +165,38 @@
                                             <div id="submenu-1-2" class="collapse submenu">
                                                 <ul class="nav flex-column">
                                                     <li class="nav-item">
-                                                        <a class="nav-link" href="index.html">Lorem.</a>
+                                                        <a class="nav-link" href="index.html">module</a>
                                                     </li>
                                                     <li class="nav-item">
-                                                        <a class="nav-link" href="#">lorem1</a>
+                                                        <a class="nav-link" href="#">module</a>
                                                     </li>
                                                     <li class="nav-item">
-                                                        <a class="nav-link" href="#">Lorem.</a>
+                                                        <a class="nav-link" href="#">module</a>
                                                     </li>
                                                     <li class="nav-item">
-                                                        <a class="nav-link" href="#">Lorem.</a>
+                                                        <a class="nav-link" href="#">module.</a>
                                                     </li>
                                                 </ul>
                                             </div>
                                         </li>
                                         <li class="nav-item">
-                                            <a class="nav-link" href="dashboard-finance.html">Lorem, ipsum dolor.</a>
+                                            <a class="nav-link" href="dashboard-finance.html">module</a>
                                         </li>
                                         <li class="nav-item">
-                                            <a class="nav-link" href="dashboard-sales.html">Lorem, ipsum dolor.</a>
+                                            <a class="nav-link" href="dashboard-sales.html">module</a>
                                         </li>
                                         <li class="nav-item">
-                                            <a class="nav-link" href="#" data-toggle="collapse" aria-expanded="false" data-target="#submenu-1-1" aria-controls="submenu-1-1">Lorem, ipsum dolor.</a>
+                                            <a class="nav-link" href="#" data-toggle="collapse" aria-expanded="false" data-target="#submenu-1-1" aria-controls="submenu-1-1">module</a>
                                             <div id="submenu-1-1" class="collapse submenu">
                                                 <ul class="nav flex-column">
                                                     <li class="nav-item">
-                                                        <a class="nav-link" href="#">Lorem, ipsum dolor.</a>
+                                                        <a class="nav-link" href="#">module</a>
                                                     </li>
                                                     <li class="nav-item">
-                                                        <a class="nav-link" href="#">Lorem, ipsum dolor.</a>
+                                                        <a class="nav-link" href="#">module</a>
                                                     </li>
                                                     <li class="nav-item">
-                                                        <a class="nav-link" href="#">Lorem, ipsum dolor.</a>
+                                                        <a class="nav-link" href="#">module</a>
                                                     </li>
                                                 </ul>
                                             </div>
@@ -481,23 +483,24 @@
                                 <!-- <p class="pageheader-text">sfsdfsdf</p> -->
                                 <div class="page-breadcrumb">
                                     <small aria-label="breadcrumb">
-                                                <?php 
-                                                    $crumbs = explode("/",$_SERVER["REQUEST_URI"]);
-                                                    foreach($crumbs as $crumb){
-                                                        echo ucfirst(str_replace(array(".php","_"),array("",""),$crumb) . ' / ');
-                                                    }
-                                                ?>
+                                            <?php require_once "../../assets/helper/breadcrumb.php"?>
                                             <!-- <li class="breadcrumb-item active" aria-current="page">Dashboard</li> -->
                                     </small>
                                 </div>
                             </div>
                         </div>
                     </div>
-
-                   
+                    <div class="row">
+                        <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12">
+                            <!-- table -->
+                             asd
                         </div>
                     </div>
+
+                   
                 </div>
+            </div>
+        </div>
             </div>
             <!-- ============================================================== -->
             <!-- footer -->
