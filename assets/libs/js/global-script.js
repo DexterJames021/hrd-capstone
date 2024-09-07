@@ -1,9 +1,10 @@
-$(document).ready(function(){
-    $('#AddtagBTN').on('click',()=>{
-        alert("yo")
-    })
+$(document).ready(function() {
+    $('#TaskTable').DataTable({
+        // "columnDefs": [{
+        //      "defaultContent": "-",
+        //     "targets": "_all"
+        //   }],
+    });
+})
 
-    $("#TaskTable").DataTable(
-        console.log("asd")
-    )
-});
+

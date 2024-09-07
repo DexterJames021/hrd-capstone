@@ -5,7 +5,7 @@ require_once "../assets/helper/breadcrumb.php";
 if(isset($_SESSION['user_id'])){
     
 }else{
-    header("Location: ../index.php");
+    header("Location: ../auth/index.php");
    
 }
 
@@ -17,13 +17,7 @@ if(isset($_SESSION['user_id'])){
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <!-- Bootstrap CSS -->
-    <link rel="stylesheet" href="../assets/vendor/bootstrap/css/bootstrap.min.css">
-    <link href="../assets/vendor/fonts/circular-std/style.css" rel="stylesheet">
-    <link rel="stylesheet" href="../assets/libs/css/style.css">
-    <link rel="stylesheet" href="../assets/vendor/fonts/fontawesome/css/fontawesome-all.css">
-    <link rel="stylesheet" href="../assets/vendor/fonts/flag-icon-css/flag-icon.min.css">
-    <link rel="shortcut icon" href="../assets/images/bcp-hrd-logo.jpg" type="image/x-icon">
+    <?php require_once "../assets/helper/imports.php"?>
     <title>Admin Dashboard</title>
 </head>
 
@@ -59,7 +53,7 @@ if(isset($_SESSION['user_id'])){
                                         <div class="list-group">
                                             <a href="#" class="list-group-item list-group-item-action active">
                                                 <div class="notification-info">
-                                                    <div class="notification-list-user-img"><img src="assets/images/avatar-2.jpg" alt="" class="user-avatar-md rounded-circle"></div>
+                                                    <div class="notification-list-user-img"><img src="#" alt="" class="user-avatar-md rounded-circle"></div>
                                                     <div class="notification-list-user-block"><span class="notification-list-user-name">Jeremy Rakestraw</span>accepted your invitation to join the team.
                                                         <div class="notification-date">2 min ago</div>
                                                     </div>
@@ -67,7 +61,7 @@ if(isset($_SESSION['user_id'])){
                                             </a>
                                             <a href="#" class="list-group-item list-group-item-action">
                                                 <div class="notification-info">
-                                                    <div class="notification-list-user-img"><img src="assets/images/avatar-3.jpg" alt="" class="user-avatar-md rounded-circle"></div>
+                                                    <div class="notification-list-user-img"><img src="#" alt="" class="user-avatar-md rounded-circle"></div>
                                                     <div class="notification-list-user-block"><span class="notification-list-user-name">John Abraham </span>is now following you
                                                         <div class="notification-date">2 days ago</div>
                                                     </div>
@@ -75,7 +69,7 @@ if(isset($_SESSION['user_id'])){
                                             </a>
                                             <a href="#" class="list-group-item list-group-item-action">
                                                 <div class="notification-info">
-                                                    <div class="notification-list-user-img"><img src="assets/images/avatar-4.jpg" alt="" class="user-avatar-md rounded-circle"></div>
+                                                    <div class="notification-list-user-img"><img src="#" alt="" class="user-avatar-md rounded-circle"></div>
                                                     <div class="notification-list-user-block"><span class="notification-list-user-name">Monaan Pechi</span> is watching your main repository
                                                         <div class="notification-date">2 min ago</div>
                                                     </div>
@@ -83,7 +77,7 @@ if(isset($_SESSION['user_id'])){
                                             </a>
                                             <a href="#" class="list-group-item list-group-item-action">
                                                 <div class="notification-info">
-                                                    <div class="notification-list-user-img"><img src="assets/images/avatar-5.jpg" alt="" class="user-avatar-md rounded-circle"></div>
+                                                    <div class="notification-list-user-img"><img src="#" alt="" class="user-avatar-md rounded-circle"></div>
                                                     <div class="notification-list-user-block"><span class="notification-list-user-name">Jessica Caruso</span>accepted your invitation to join the team.
                                                         <div class="notification-date">2 min ago</div>
                                                     </div>
@@ -130,7 +124,7 @@ if(isset($_SESSION['user_id'])){
                             </ul>
                         </li> -->
                         <li class="nav-item dropdown nav-user">
-                            <a class="nav-link nav-user-img" href="#" id="navbarDropdownMenuLink2" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><img src="assets/images/avatar-1.jpg" alt="" class="user-avatar-md rounded-circle"></a>
+                            <a class="nav-link nav-user-img" href="#" id="navbarDropdownMenuLink2" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><img src="#" alt="" class="user-avatar-md rounded-circle"></a>
                             <div class="dropdown-menu dropdown-menu-right nav-user-dropdown" aria-labelledby="navbarDropdownMenuLink2">
                                 <div class="nav-user-info">
                                     <h5 class="mb-0 text-white nav-user-name"> <?= $_SESSION['username'] ?> </h5>
@@ -631,7 +625,7 @@ if(isset($_SESSION['user_id'])){
 
                                     <div class="card-body p-0">
                                         <div class="table-responsive">
-                                            <table class="table" id="TaskTable">
+                                            <table class="display table table-striped" id="TaskTable">
                                                 <thead class="bg-light">
                                                     <tr class="border-0">
                                                         <th class="border-0">#</th>
@@ -647,17 +641,18 @@ if(isset($_SESSION['user_id'])){
                                                     <tr>
                                                         <td>1</td>
                                                         <td>
-                                                            <div class="m-r-10"><img src="assets/images/product-pic.jpg" alt="user" class="rounded" width="45"></div>
+                                                            <div class="m-r-10"><img src="#" alt="user" class="rounded" width="45"></div>
                                                         </td>
                                                         <td>Product #1 </td>
                                                         <td>id000001 </td>
                                                         <td>27-08-2018 01:22:12</td>
                                                         <td>Patricia J. King </td>
                                                         <td><span class="badge-dot badge-brand mr-1"></span>InTransit </td>
-                                                    </tr>
+                                                    <!-- </tr>
+                                                    
                                                    
                                                         <td colspan="9"><a href="#" class="btn btn-outline-light float-right">View Details</a></td>
-                                                    </tr>
+                                                    </tr> -->
                                                 </tbody>
                                             </table>
                                         </div>
@@ -701,31 +696,6 @@ if(isset($_SESSION['user_id'])){
     <!-- ============================================================== -->
     <!-- end main wrapper  -->
     <!-- ============================================================== -->
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-     
-    <!-- jquery 3.3.1 -->
-    <script src="../assets/vendor/jquery/jquery-3.3.1.min.js"></script>
-    <!-- bootstap bundle js -->
-    <script src="../assets/vendor/bootstrap/js/bootstrap.bundle.js"></script>
-    <!-- slimscroll js -->
-    <script src="../assets/vendor/slimscroll/jquery.slimscroll.js"></script>
-    <!-- main js -->
-    <script src="../assets/libs/js/main-js.js"></script>
-    <!-- global JavaScript -->
-    <script src="../assets/libs/js/global-script.js"></script>
 </body>
  
 </html>
